@@ -23,6 +23,7 @@ jobs:
 
       - name: Test Brevo email
         env:
+          FERNET_KEY: ${{ secrets.FERNET_KEY }}
           BREVO_SMTP_USER: ${{ secrets.BREVO_SMTP_USER }}
           BREVO_SMTP_KEY: ${{ secrets.BREVO_SMTP_KEY }}
           BREVO_SENDER_EMAIL: ${{ secrets.BREVO_SENDER_EMAIL }}
